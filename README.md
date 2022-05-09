@@ -1,24 +1,57 @@
-# json-server-base
+# Seja bem-vindo a esta API
 
-Esse é o repositório com a base de JSON-Server + JSON-Server-Auth já configurada, feita para ser usada no desenvolvimento das API's nos Capstones do Q2.
+## **Desenvolvida por Rafhael Mallorga.**
 
-## Endpoints
+---
 
-Assim como a documentação do JSON-Server-Auth traz (https://www.npmjs.com/package/json-server-auth), existem 3 endpoints que podem ser utilizados para cadastro e 2 endpoints que podem ser usados para login.
+Para criar um novo usuario voce deve utilizar um dos endpoints abaixo:
 
-### Cadastro
+> POST /register
 
-POST /register <br/>
-POST /signup <br/>
-POST /users
+> POST /signup
 
-Qualquer um desses 3 endpoints irá cadastrar o usuário na lista de "Users", sendo que os campos obrigatórios são os de email e password.
-Você pode ficar a vontade para adicionar qualquer outra propriedade no corpo do cadastro dos usuários.
+> POST /users
 
+O corpo da mensagem deve conter no minimo as chaves abaixo:
 
-### Login
+```
+{
+  "email": "email@email.com",
+  "password": "password"
+}
+```
 
-POST /login <br/>
-POST /signin
+Para efetuar o login use qualquer um dos dois endpoints abaixo:
 
-Qualquer um desses 2 endpoints pode ser usado para realizar login com um dos usuários cadastrados na lista de "Users"
+> POST /login
+
+> POST /signin
+
+Corpo da mensagem para o login:
+
+```
+{
+  "email": "email@email.com",
+  "password": "password"
+}
+```
+
+## **Criando um novo Post**
+
+Utilize o endpoint `/posts` com o metodo `POST`
+
+Obs: É necessário estar logado para criar novos posts (Token obrigatório)
+
+## **Listando os Post**
+
+Utilize o endpoint `/posts` com o metodo `GET`
+
+## **Criando um novo Comentario**
+
+Utilize o endpoint `/comments` com o metodo `POST`
+
+Obs: É necessário estar logado para criar novos comentarios (Token obrigatório)
+
+## **Listando os Comentarios**
+
+Utilize o endpoint `/comments` com o metodo `GET`

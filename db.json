@@ -6,6 +6,46 @@
       "name": "Kenzinho",
       "age": 38,
       "id": 1
+    },
+    {
+      "email": "rafhael@email.com",
+      "password": "$2a$10$1kC4dhqJH6vMRt0GT5ukLOwY4qs8dEJ60haahCbPj0JD6GexWNjry",
+      "name": "Rafhael",
+      "age": 27,
+      "id": 2
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "My first post",
+      "author": "Rafhael",
+      "userId": 2,
+      "comments": [
+        {
+          "id": 2,
+          "body": "Post from another owner",
+          "userId": 1
+        }
+      ]
+    },
+    {
+      "title": "My second post",
+      "author": "Rafhael",
+      "userId": 2,
+      "id": 2,
+      "comments": [
+        {
+          "id": 1,
+          "body": "My first comment on a post",
+          "userId": 2
+        },
+        {
+          "id": 3,
+          "body": "My post from insonia",
+          "userId": 2
+        }
+      ]
     }
   ]
 }
